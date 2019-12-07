@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MeteoriteShooter : MonoBehaviour
 {
-    private float power = 100;
     private bool IsShooted;
     //float speed;
 
@@ -27,7 +26,7 @@ public class MeteoriteShooter : MonoBehaviour
         }*/
     }
 
-    public void Shoot(Vector2 force)
+    public void Shoot(Vector2 force, float power)
     {
         Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
         //Vector2 force = new Vector2(0.0f, 100.0f);
