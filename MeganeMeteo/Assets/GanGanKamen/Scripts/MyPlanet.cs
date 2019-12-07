@@ -10,6 +10,7 @@ public class MyPlanet : MonoBehaviour
     public GameObject meteoPrefab;
     public int bulletNum;
     private int preBulletNum;
+    [SerializeField] private float shootPower;
     [SerializeField] private int maxNulletNum;
     [SerializeField] private Transform muzzle;
     [SerializeField] public float chargeTime;
@@ -64,7 +65,7 @@ public class MyPlanet : MonoBehaviour
         
         MeteoriteShooter shooter = planetObj.GetComponent<MeteoriteShooter>();
         Vector3 force = (muzzle.transform.position - planet.transform.position).normalized;
-        shooter.Shoot(new Vector2(force.x,force.y));
+        shooter.Shoot(new Vector2(force.x,force.y),shootPower);
         bulletNum -= 1;
         canShoot = false;
     }
