@@ -390,6 +390,12 @@ PrefabInstance:
       propertyPath: playerNum
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5569057974218658908, guid: 9ffd9fcd5fa0ea443aa26abb1253472f,
+        type: 3}
+      propertyPath: meteoPrefab
+      value: 
+      objectReference: {fileID: 2927809622979448261, guid: c5c68cbe995db024d82316b02d38c8ad,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ffd9fcd5fa0ea443aa26abb1253472f, type: 3}
 --- !u!1 &402085250
@@ -1566,5 +1572,11 @@ PrefabInstance:
       propertyPath: bulletNum
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5569057974218658908, guid: 9ffd9fcd5fa0ea443aa26abb1253472f,
+        type: 3}
+      propertyPath: meteoPrefab
+      value: 
+      objectReference: {fileID: 2927809622979448261, guid: c5c68cbe995db024d82316b02d38c8ad,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ffd9fcd5fa0ea443aa26abb1253472f, type: 3}
