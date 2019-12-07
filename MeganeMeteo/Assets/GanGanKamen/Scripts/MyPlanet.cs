@@ -30,7 +30,7 @@ public class MyPlanet : MonoBehaviour
     [SerializeField] private MainGameScene gameScene;
 
     private MainGameSystem system;
-
+    [SerializeField] private bool limit;
     [SerializeField] private Vector2 limitRotate;
     // Start is called before the first frame update
     private void Awake()
@@ -55,21 +55,28 @@ public class MyPlanet : MonoBehaviour
 
     public void PlanetRotate(float axis,int direction)
     {
-        if(direction == 1)
+        if (limit)
         {
-            if(planet.transform.eulerAngles.z < limitRotate.y)
+            if (direction == 1)
             {
-                planet.transform.Rotate(0, 0, rotateSpeed * Time.deltaTime * Mathf.Abs(axis));
+                if (planet.transform.eulerAngles.z < limitRotate.y)
+                {
+                    planet.transform.Rotate(0, 0, rotateSpeed * Time.deltaTime * Mathf.Abs(axis));
+                }
+
             }
-            
+            else if (direction == -1)
+            {
+                if (planet.transform.eulerAngles.z > limitRotate.x)
+                {
+                    planet.transform.Rotate(0, 0, -rotateSpeed * Time.deltaTime * Mathf.Abs(axis));
+                }
+
+            }
         }
-        else if(direction == -1)
+        else
         {
-            if (planet.transform.eulerAngles.z > limitRotate.x)
-            {
-                planet.transform.Rotate(0, 0, -rotateSpeed * Time.deltaTime * Mathf.Abs(axis));
-            }
-            
+            planet.transform.Rotate(0, 0, rotateSpeed * Time.deltaTime * axis);
         }
         
     }
