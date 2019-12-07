@@ -27,6 +27,30 @@ public class FadeMng : SingletonBase<FadeMng>
     [SerializeField]
     float FadeInTimeMax = 2.0f;
 
+    public bool IsVisible
+    {
+        get
+        {
+            return fadeState == FadeState.Visible;
+        }
+    }
+
+    public bool IsInvisible
+    {
+        get
+        {
+            return fadeState == FadeState.Invisible;
+        }
+    }
+
+    public bool IsFade
+    {
+        get
+        {
+            return fadeState == FadeState.FadeIn || fadeState == FadeState.FadeOut;
+        }
+    }
+
     public delegate void Callback_Invisible();
     public delegate void Callback_Visible();
 
