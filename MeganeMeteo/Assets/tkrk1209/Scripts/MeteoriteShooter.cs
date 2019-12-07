@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeteoriteShooter : MonoBehaviour
 {
 
-    public bool IsShooted;
+    private bool IsShooted;
     //float speed;
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class MeteoriteShooter : MonoBehaviour
 
     private void Update()
     {
-
+        /*
         if (!IsShooted && Input.GetKeyUp(KeyCode.Space))
         {
             IsShooted = true;
@@ -24,7 +24,13 @@ public class MeteoriteShooter : MonoBehaviour
             Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
             Vector2 force = new Vector2(0.0f, 100.0f);
             rb.AddForce(force);
-        }
+        }*/
     }
 
+    public void Shoot(Vector2 force)
+    {
+        Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
+        //Vector2 force = new Vector2(0.0f, 100.0f);
+        rb.AddForce(force);
+    }
 }

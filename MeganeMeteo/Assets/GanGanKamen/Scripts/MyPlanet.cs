@@ -44,6 +44,8 @@ public class MyPlanet : MonoBehaviour
             return;
         }
         GameObject planetObj = Instantiate(meteoPrefab, muzzle.position, muzzle.rotation);
+        MeteoriteShooter shooter = planetObj.GetComponent<MeteoriteShooter>();
+        shooter.Shoot();
         bulletNum -= 1;
         canShoot = false;
     }
