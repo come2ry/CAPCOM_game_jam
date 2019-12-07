@@ -6,7 +6,7 @@ public class GravityPointInfo : MonoBehaviour
     [SerializeField, Range(0, 10), Tooltip("重力の範囲")]
     private float range = 5f;
 
-    [SerializeField, Range(0, 10), Tooltip("重力の強さ")]
+    [SerializeField, Range(-10, 10), Tooltip("重力の強さ")]
     private float intencity = 5f;
 
     [SerializeField, Tooltip("重力の中心点")]
@@ -17,6 +17,12 @@ public class GravityPointInfo : MonoBehaviour
 
     [SerializeField, Range(1, 255), Tooltip("重力範囲を表示するメッシュのポリゴン数に影響します")]
     private int quality = 32;
+
+    [SerializeField, Tooltip("PointEffector2D")]
+    private PointEffector2D effecter = default;
+
+    [SerializeField, Tooltip("重力の衝突範囲")]
+    private CircleCollider2D collider = default;
 
     /// <summary> 重力の範囲 </summary>
     public float Range => range;
@@ -36,9 +42,11 @@ public class GravityPointInfo : MonoBehaviour
     /// <summary> 重力の表示に使うメッシュ </summary>
     public Mesh GravityRangeMesh { get; private set; }
 
+    // インスペクターから変更があったらメッシュを再構築する
     private void OnValidate()
     {
-        // インスペクターから変更があったらメッシュを再構築する
+        effecter.forceMagnitude = Intencity;
+        collider.radius = Range;
         GravityRangeMesh = MeshCreater.CreateSectorMesh(360f * Mathf.Deg2Rad, quality);
     }
 }
