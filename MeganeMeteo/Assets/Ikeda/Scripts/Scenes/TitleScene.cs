@@ -15,7 +15,7 @@ public sealed class TitleScene : SceneBase
 
     protected override void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) && !FadeMng.Instance.IsFade)
         {
             SoundMng.Instance.PlaySE(SoundMng.SETag.Select);
             StartCoroutine(StartColum_Effect());
