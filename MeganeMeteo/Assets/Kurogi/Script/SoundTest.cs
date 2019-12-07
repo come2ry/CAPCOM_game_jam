@@ -6,16 +6,22 @@ using UnityEngine.SceneManagement;
 public class SoundTest : MonoBehaviour
 {
     SoundMng mng;
+    FadeMng fmng;
     // Start is called before the first frame update
     void Start()
     {
         mng = SoundMng.Instance;
-
+        fmng = FadeMng.Instance;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            fmng.RequestFade();
+        }
+
         if (Input.GetKeyDown(KeyCode.A))
         {
             mng.PlayBGM(SoundMng.BGMTag.Title);
