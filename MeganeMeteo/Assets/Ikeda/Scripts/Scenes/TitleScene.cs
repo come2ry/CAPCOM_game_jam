@@ -26,7 +26,15 @@ public sealed class TitleScene : SceneBase
             time += 0.2f;
         }
         yield return new WaitForSeconds(1.0f);
+
+        FadeMng.Instance.RequestFade();
+
+        yield return new WaitForSecondsRealtime(0.1f);
+        while (FadeMng.Instance.IsFade)
+            yield return new WaitForSecondsRealtime(0.1f);
+
         SceneDirector.NextScene();
+
         yield break;
     }
 }

@@ -25,6 +25,10 @@ public class SceneBase : MonoBehaviour
 
     public void NextScene()
     {
+        //FadeOut
+        if(FadeMng.Instance.IsInvisible)
+            FadeMng.Instance.RequestFade();
+
         SceneManager.LoadScene(_nextScene);
     }
 }
