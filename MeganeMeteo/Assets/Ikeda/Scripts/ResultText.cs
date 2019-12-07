@@ -10,8 +10,6 @@ public class ResultText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DataManager.Instance.SetWinPlayer(PLAYERS.PLAYER_2);
-
         _text = GetComponent<TextMeshProUGUI>();
         if (DataManager.Instance.Winnder == PLAYERS.PLAYER_1)
             _text.text = "Player1";

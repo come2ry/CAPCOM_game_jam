@@ -6,19 +6,28 @@ public sealed class MainGameScene : SceneBase
 {
     protected override void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
-            SceneDirector.NextScene();
+
     }
 
     //対戦ゲーム終了
     public void EndMainGame()
     {
-        SceneDirector.NextScene();
+        FadeMng.Instance.RequestFade();
+        StartCoroutine(ChangeScene());
     }
 
     //勝者を設定
     public void SetWinner(PLAYERS winner)
     {
         DataManager.Instance.SetWinPlayer(winner);
+    }
+
+    private IEnumerator ChangeScene()
+    {
+        yield return new WaitForSeconds(0.1f);
+        while (FadeMng.Instance.IsFade)
+            yield return new WaitForSecondsRealtime(0.1f);
+        SceneDirector.NextScene();
+        yield break;
     }
 }

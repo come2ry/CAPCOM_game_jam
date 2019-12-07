@@ -7,6 +7,8 @@ public sealed class TitleScene : SceneBase
     [SerializeField]
     private GameObject _StartColum;
 
+    private bool _IsEffect = false;
+
     protected override void Start()
     {
         base.Start();
@@ -15,7 +17,7 @@ public sealed class TitleScene : SceneBase
 
     protected override void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && !FadeMng.Instance.IsFade)
+        if (Input.GetKeyUp(KeyCode.Space) && !_IsEffect)
         {
             SoundMng.Instance.PlaySE(SoundMng.SETag.Select);
             StartCoroutine(StartColum_Effect());
@@ -24,6 +26,7 @@ public sealed class TitleScene : SceneBase
 
     private IEnumerator StartColum_Effect()
     {
+        _IsEffect = true;
         float time = 0.0f;
         while (true)
         {

@@ -10,6 +10,8 @@ public class ResultScene : SceneBase
     [SerializeField]
     Vector3 hidePos;
 
+    private bool _IsUpdate = false;
+
     protected override void Start()
     {
         base.Start();
@@ -23,6 +25,7 @@ public class ResultScene : SceneBase
     {
         base.Update();
 
+        if (!_IsUpdate) return;
         if (Input.GetKeyUp(KeyCode.Space) && !FadeMng.Instance.IsFade)
         {
             FadeMng.Instance.RequestFade();
@@ -48,7 +51,7 @@ public class ResultScene : SceneBase
             time += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        Debug.Log("Result");
+        _IsUpdate = true;
         yield break;
     }
 
