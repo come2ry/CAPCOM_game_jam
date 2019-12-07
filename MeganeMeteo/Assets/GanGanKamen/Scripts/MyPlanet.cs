@@ -19,10 +19,17 @@ public class MyPlanet : MonoBehaviour
     public float chargeCount = 0;
     private float coolDownCount = 0;
 
+    public int hp;
+    private int preHp;
+
+    [SerializeField]private bool invincible = false;
+    [SerializeField] private float invincibleTime;
+    [SerializeField] private float invincibleCount;
     // Start is called before the first frame update
     void Start()
     {
         preBulletNum = bulletNum;
+        preHp = hp;
     }
 
     // Update is called once per frame
@@ -30,6 +37,7 @@ public class MyPlanet : MonoBehaviour
     {
         ShootCoolDown();
         ChargeBullet();
+        HPChange();
     }
 
     public void PlanetRotate(float axis)
@@ -47,7 +55,6 @@ public class MyPlanet : MonoBehaviour
         
         MeteoriteShooter shooter = planetObj.GetComponent<MeteoriteShooter>();
         Vector3 force = (muzzle.transform.position - planet.transform.position).normalized;
-        Debug.Log(force);
         shooter.Shoot(new Vector2(force.x,force.y));
         bulletNum -= 1;
         canShoot = false;
@@ -96,4 +103,39 @@ public class MyPlanet : MonoBehaviour
         }
     }
 
+    private void HPChange()
+    {
+        if(preHp != hp)
+        {
+            preHp = hp;
+            invincible = true;
+        }
+        if (invincible)
+        {
+            if(invincibleCount >= invincibleTime)
+            {
+                invincibleCount = 0;
+                invincible = false;
+            }
+            else
+            {
+                invincibleCount += Time.deltaTime;
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Meteorite"))
+        {
+            Debug.Log("Crash");
+            MeteoriteDestoryProcess destoryProcess 
+                = collision.gameObject.transform.parent.GetComponent<MeteoriteDestoryProcess>();
+            destoryProcess.Dead();
+            if(invincible == false && hp >0)
+            {
+                hp--;
+            }
+        }
+    }
 }
