@@ -44,12 +44,11 @@ public class MyPlanet : MonoBehaviour
             return;
         }
         GameObject planetObj = Instantiate(meteoPrefab, muzzle.position, muzzle.rotation);
-        /*
+        
         MeteoriteShooter shooter = planetObj.GetComponent<MeteoriteShooter>();
-        float angleDir = planet.transform.eulerAngles.z * (Mathf.PI / 180.0f);
-        Vector2 dir = new Vector2(Mathf.Cos(angleDir), Mathf.Sin(angleDir));
-        Debug.Log(dir);
-        shooter.Shoot(dir);*/
+        Vector3 force = (muzzle.transform.position - planet.transform.position).normalized;
+        Debug.Log(force);
+        shooter.Shoot(new Vector2(force.x,force.y));
         bulletNum -= 1;
         canShoot = false;
     }
