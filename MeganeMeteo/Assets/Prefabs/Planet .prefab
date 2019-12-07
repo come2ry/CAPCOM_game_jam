@@ -122,6 +122,7 @@ MonoBehaviour:
   gravityPoint: {fileID: 1914713661}
   colliderEvent: {fileID: 2631168140795795951}
   healthEvent: {fileID: 6301006839342904131}
+  destoryProcess: {fileID: 3356841122318642500}
 --- !u!114 &3356841122318642500
 MonoBehaviour:
   m_ObjectHideFlags: 0
