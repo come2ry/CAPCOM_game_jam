@@ -30,6 +30,8 @@ public class MyPlanet : MonoBehaviour
     [SerializeField] private MainGameScene gameScene;
 
     private MainGameSystem system;
+
+    [SerializeField] private Vector2 limitRotate;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -48,11 +50,28 @@ public class MyPlanet : MonoBehaviour
         ShootCoolDown();
         ChargeBullet();
         HPChange();
+        Debug.Log(planet.transform.rotation.eulerAngles);
     }
 
-    public void PlanetRotate(float axis)
+    public void PlanetRotate(float axis,int direction)
     {
-        planet.transform.Rotate(0, 0, -rotateSpeed * Time.deltaTime * axis);
+        if(direction == 1)
+        {
+            if(planet.transform.eulerAngles.z < limitRotate.y)
+            {
+                planet.transform.Rotate(0, 0, rotateSpeed * Time.deltaTime * Mathf.Abs(axis));
+            }
+            
+        }
+        else if(direction == -1)
+        {
+            if (planet.transform.eulerAngles.z > limitRotate.x)
+            {
+                planet.transform.Rotate(0, 0, -rotateSpeed * Time.deltaTime * Mathf.Abs(axis));
+            }
+            
+        }
+        
     }
 
     public void Fire()
