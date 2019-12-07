@@ -92,7 +92,12 @@ MonoBehaviour:
   rotateSpeed: 50
   meteoPrefab: {fileID: 1197112811155287991, guid: 9e65940bc6135ac4a9f187993b397b40,
     type: 3}
+  bulletNum: 5
+  maxNulletNum: 8
   muzzle: {fileID: 1269224481}
+  chargeTime: 3
+  coolDownTime: 1
+  canShoot: 0
 --- !u!1 &5569057974357348099
 GameObject:
   m_ObjectHideFlags: 0
