@@ -57,6 +57,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3205317620102280682}
   - component: {fileID: 1611979495}
+  - component: {fileID: 1914713662}
+  - component: {fileID: 1914713661}
   m_Layer: 0
   m_Name: 'Planet '
   m_TagString: Planet
@@ -102,6 +104,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1914713662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3205317620102280687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f47377ca6c9064c85fac26df1f40cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityPoint: {fileID: 1914713661}
+--- !u!114 &1914713661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3205317620102280687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8701b675056dd8e44a55f23b82645948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 1
+  intencity: 5
+  origin: {fileID: 3205317620102280682}
+  color: {r: 1, g: 0, b: 0.97422075, a: 0.2509804}
+  quality: 32
 --- !u!1 &3205317621324384943
 GameObject:
   m_ObjectHideFlags: 0
