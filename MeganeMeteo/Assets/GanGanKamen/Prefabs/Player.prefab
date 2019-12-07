@@ -90,7 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planet: {fileID: 5569057975094622187}
   rotateSpeed: 50
-  meteoPrefab: {fileID: 1197112811155287991, guid: 9e65940bc6135ac4a9f187993b397b40,
+  meteoPrefab: {fileID: 2927809622979448261, guid: c5c68cbe995db024d82316b02d38c8ad,
     type: 3}
   bulletNum: 5
   maxNulletNum: 8
@@ -98,6 +98,7 @@ MonoBehaviour:
   chargeTime: 3
   coolDownTime: 1
   canShoot: 0
+  chargeCount: 0
 --- !u!1 &5569057974357348099
 GameObject:
   m_ObjectHideFlags: 0
