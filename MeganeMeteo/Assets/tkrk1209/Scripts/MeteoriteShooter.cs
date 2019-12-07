@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeteoriteShooter : MonoBehaviour
 {
-    private float power = 100;
+    [SerializeField]private float power;
     private bool IsShooted;
     //float speed;
 

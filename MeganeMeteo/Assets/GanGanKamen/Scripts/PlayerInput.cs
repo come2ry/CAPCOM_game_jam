@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     private MyPlanet myPlanet;
-    [SerializeField] private int playerNum;
+    public int playerNum;
     // Start is called before the first frame update
     private void Awake()
     {
