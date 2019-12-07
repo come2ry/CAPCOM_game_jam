@@ -351,6 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextScene: MainGame
+  _StartColum: {fileID: 196836222}
 --- !u!4 &539834564
 Transform:
   m_ObjectHideFlags: 0
