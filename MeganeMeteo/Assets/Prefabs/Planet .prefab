@@ -130,10 +130,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1
-  intencity: 5
+  intencity: -2
   origin: {fileID: 3205317620102280682}
   color: {r: 1, g: 0, b: 0.97422075, a: 0.2509804}
   quality: 32
+  effecter: {fileID: 3205317621519394671}
+  collider: {fileID: 3205317621519394664}
 --- !u!1 &3205317621324384943
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +263,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
 --- !u!250 &3205317621519394671
 PointEffector2D:
   m_ObjectHideFlags: 0
