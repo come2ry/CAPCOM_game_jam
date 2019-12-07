@@ -28,11 +28,16 @@ public class PlayerInput : MonoBehaviour
         switch (playerNum)
         {
             case 1:
-                if (Input.GetAxis("Horizontal") != 0)
+                if (Input.GetAxis("Horizontal") >0)
                 {
-                    myPlanet.PlanetRotate(Input.GetAxis("Horizontal"));
+                    myPlanet.PlanetRotate(Input.GetAxis("Horizontal"),1);
+                    //d
                 }
-
+                else if(Input.GetAxis("Horizontal") < 0)
+                {
+                    myPlanet.PlanetRotate(Input.GetAxis("Horizontal"), -1);
+                    //a
+                }
                 if (Input.GetButtonDown("Fire1"))
                 {
                     myPlanet.Fire();
@@ -40,9 +45,13 @@ public class PlayerInput : MonoBehaviour
                 break;
 
             case 2:
-                if (Input.GetAxis("Horizontal2") != 0)
+                if (Input.GetAxis("Horizontal2") > 0)
                 {
-                    myPlanet.PlanetRotate(Input.GetAxis("Horizontal2"));
+                    myPlanet.PlanetRotate(Input.GetAxis("Horizontal2"),1);
+                }
+                else if (Input.GetAxis("Horizontal2") < 0)
+                {
+                    myPlanet.PlanetRotate(Input.GetAxis("Horizontal2"), -1);
                 }
                 if (Input.GetButtonDown("Fire2"))
                 {
