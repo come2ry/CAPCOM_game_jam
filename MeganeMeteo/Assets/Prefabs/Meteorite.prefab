@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb10c75e4ea748d44ae876f1126ca6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 8366701848270037712, guid: f7072aa4558b44a48b1df7192f4f4b37,
+    type: 3}
 --- !u!114 &8349977305538766941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +202,7 @@ GameObject:
   - component: {fileID: 2927809625003458694}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Meteorite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
