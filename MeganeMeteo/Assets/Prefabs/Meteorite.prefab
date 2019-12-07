@@ -84,6 +84,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8060df026cefc4ee9be9894d893c3212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MeteoRay: {fileID: 5477473375737821076, guid: 1eb8bb8a109e6410cbc937ddd7dfb9f2,
+    type: 3}
+  RayInstance: {fileID: 0}
 --- !u!114 &2381046686545168295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb10c75e4ea748d44ae876f1126ca6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 8366701848270037712, guid: f7072aa4558b44a48b1df7192f4f4b37,
+  EffectPrefab: {fileID: 8366701848270037712, guid: f7072aa4558b44a48b1df7192f4f4b37,
     type: 3}
 --- !u!114 &8349977305538766941
 MonoBehaviour:
