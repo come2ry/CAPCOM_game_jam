@@ -13,6 +13,11 @@ public class DataManager : SingletonBase<DataManager>
     [SerializeField]
     private PLAYERS _Winner;
 
+    public PLAYERS Winnder
+    {
+        get { return _Winner; }
+    }
+
     //勝者を設定
     public void SetWinPlayer(PLAYERS winner)
     {

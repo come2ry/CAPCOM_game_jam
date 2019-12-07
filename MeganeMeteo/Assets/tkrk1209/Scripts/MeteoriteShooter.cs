@@ -43,7 +43,7 @@ public class MeteoriteShooter : MonoBehaviour
         }*/
     }
 
-    public void Shoot(Vector2 force)
+    public void Shoot(Vector2 force, float power)
     {
         rb.AddForce(force * power);
     }

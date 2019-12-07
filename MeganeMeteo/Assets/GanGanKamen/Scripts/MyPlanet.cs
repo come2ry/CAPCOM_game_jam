@@ -10,6 +10,7 @@ public class MyPlanet : MonoBehaviour
     public GameObject meteoPrefab;
     public int bulletNum;
     private int preBulletNum;
+    [SerializeField] private float shootPower;
     [SerializeField] private int maxNulletNum;
     [SerializeField] private Transform muzzle;
     [SerializeField] public float chargeTime;
@@ -25,7 +26,16 @@ public class MyPlanet : MonoBehaviour
     [SerializeField]private bool invincible = false;
     [SerializeField] private float invincibleTime;
     [SerializeField] private float invincibleCount;
+
+    [SerializeField] private MainGameScene gameScene;
+
+    private MainGameSystem system;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        system = GameObject.FindGameObjectWithTag("System").GetComponent<MainGameSystem>();
+    }
+
     void Start()
     {
         preBulletNum = bulletNum;
@@ -55,7 +65,7 @@ public class MyPlanet : MonoBehaviour
         
         MeteoriteShooter shooter = planetObj.GetComponent<MeteoriteShooter>();
         Vector3 force = (muzzle.transform.position - planet.transform.position).normalized;
-        shooter.Shoot(new Vector2(force.x,force.y));
+        shooter.Shoot(new Vector2(force.x,force.y),shootPower);
         bulletNum -= 1;
         canShoot = false;
     }
@@ -107,8 +117,12 @@ public class MyPlanet : MonoBehaviour
     {
         if(preHp != hp)
         {
-            preHp = hp;
             invincible = true;
+            if(hp == 0 && MainGameSystem.gameOver == false && system != null)
+            {
+                system.GameOver(GetComponent<PlayerInput>().playerNum);
+            }
+            preHp = hp;
         }
         if (invincible)
         {
@@ -128,7 +142,6 @@ public class MyPlanet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Meteorite"))
         {
-            Debug.Log("Crash");
             MeteoriteDestoryProcess destoryProcess 
                 = collision.gameObject.transform.parent.GetComponent<MeteoriteDestoryProcess>();
             destoryProcess.Dead();

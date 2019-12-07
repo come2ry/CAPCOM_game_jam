@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Meteorite
   - Planet
+  - System
   layers:
   - Default
   - TransparentFX

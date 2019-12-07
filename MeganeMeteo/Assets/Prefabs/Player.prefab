@@ -94,6 +94,7 @@ MonoBehaviour:
   meteoPrefab: {fileID: 2927809622979448261, guid: c5c68cbe995db024d82316b02d38c8ad,
     type: 3}
   bulletNum: 5
+  shootPower: 200
   maxNulletNum: 8
   muzzle: {fileID: 1269224481}
   chargeTime: 3
@@ -104,6 +105,7 @@ MonoBehaviour:
   invincible: 0
   invincibleTime: 2
   invincibleCount: 0
+  gameScene: {fileID: 0}
 --- !u!58 &7041630180851160570
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -5,22 +5,22 @@ using UnityEngine;
 public class Collision2DEvent : MonoBehaviour
 {
     /// <summary> 衝突時に発生するイベント </summary>
-    public event Action<Collision2D> CollisionEnterEvent;
+    public event Action<Collision2D> CollisionEnterEvent = default;
 
     /// <summary> 衝突中に発生するイベント </summary>
-    public event Action<Collision2D> CollisionStayEvent;
+    public event Action<Collision2D> CollisionStayEvent = default;
 
     /// <summary> 衝突をやめたときに発生するイベント </summary>
-    public event Action<Collision2D> CollisionExitEvent;
+    public event Action<Collision2D> CollisionExitEvent = default;
 
     /// <summary> 衝突時に発生するイベント </summary>
-    public event Action<Collider2D> TriggerEnterEvent;
+    public event Action<Collider2D> TriggerEnterEvent = default;
 
     /// <summary> 衝突中に発生するイベント </summary>
-    public event Action<Collider2D> TriggerStayEvent;
+    public event Action<Collider2D> TriggerStayEvent = default;
 
     /// <summary> 衝突をやめたときに発生するイベント </summary>
-    public event Action<Collider2D> TriggerExitEvent;
+    public event Action<Collider2D> TriggerExitEvent = default;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
