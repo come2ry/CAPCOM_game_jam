@@ -3,10 +3,15 @@
 /// <summary> 隕石の死亡処理 </summary>
 public class MeteoriteDestoryProcess : MonoBehaviour
 {
-    public GameObject BulletPrefab;
+    public GameObject EffectPrefab;
     public void Dead()
     {
-        Instantiate(BulletPrefab);
+        Instantiate(EffectPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject.GetComponent<MeteoriteShooter>().RayInstance);
         Destroy(gameObject);
+        // foreach ( Transform child in transform )
+        // {
+        //     Destroy(child.gameObject);
+        // }
     }
 }
