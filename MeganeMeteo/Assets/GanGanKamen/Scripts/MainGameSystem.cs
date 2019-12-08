@@ -26,13 +26,15 @@ public class MainGameSystem : MonoBehaviour
     public void GameOver(int playerNum)
     {
         if (gameOver) return;
-        if(playerNum == 1)
+        if(playerNum == 2)
         {
             gameScene.SetWinner(PLAYERS.PLAYER_1);
+            Debug.Log("p1");
         }
-        else if(playerNum == 2)
+        if(playerNum == 1)
         {
             gameScene.SetWinner(PLAYERS.PLAYER_2);
+            Debug.Log("p2");
         }
         gameScene.EndMainGame();
         gameOver = true;
