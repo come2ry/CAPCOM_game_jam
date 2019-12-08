@@ -15,6 +15,7 @@ public class ResultScene : SceneBase
     protected override void Start()
     {
         base.Start();
+        SoundMng.Instance.PlayBGM(SoundMng.BGMTag.Result);
         StartCoroutine(ResultEffect());
     }
 
@@ -60,6 +61,8 @@ public class ResultScene : SceneBase
         yield return new WaitForSeconds(0.1f);
         while (FadeMng.Instance.IsFade)
             yield return new WaitForSecondsRealtime(0.1f);
+
+        SoundMng.Instance.StopBGM();
         SceneDirector.NextScene();
         yield break;
     }

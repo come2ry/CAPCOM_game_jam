@@ -4,6 +4,12 @@ using UnityEngine;
 
 public sealed class MainGameScene : SceneBase
 {
+    protected override void Start()
+    {
+        base.Start();
+        SoundMng.Instance.PlayBGM(SoundMng.BGMTag.GameScene);
+    }
+
     protected override void Update()
     {
 
@@ -27,6 +33,8 @@ public sealed class MainGameScene : SceneBase
         yield return new WaitForSeconds(0.1f);
         while (FadeMng.Instance.IsFade)
             yield return new WaitForSecondsRealtime(0.1f);
+
+        SoundMng.Instance.StopBGM();
         SceneDirector.NextScene();
         yield break;
     }
