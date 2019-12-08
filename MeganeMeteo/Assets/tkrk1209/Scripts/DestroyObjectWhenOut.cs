@@ -8,7 +8,7 @@ public sealed class DestroyObjectWhenOut : MonoBehaviour
     Renderer _renderer;
     void Start()
     {
-        _renderer = GetComponent<Renderer>();
+        _renderer = GetComponentInChildren<Renderer>();
     }
     void Update()
     {
