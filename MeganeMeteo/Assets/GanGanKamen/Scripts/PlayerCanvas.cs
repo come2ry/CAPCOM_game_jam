@@ -27,6 +27,11 @@ public class PlayerCanvas : MonoBehaviour
     void Update()
     {
         UIChange();
+        if (myPlanet.hasBulletNum)
+        {
+            BulletUISet();
+            BulletNumCharge();
+        }
     }
 
     private void UIChange()
