@@ -4,7 +4,7 @@ using UnityEditor;
 /// <summary> ギズモの拡張クラス </summary>
 public class GizmosExtension
 {
-    /// <summary> 視野範囲を描画します。 </summary>
+    /// <summary> 重力範囲を描画します。 </summary>
     [DrawGizmo(GizmoType.NonSelected | GizmoType.Selected)]
     private static void DrawFov(GravityPointInfo info, GizmoType gizmoType)
     {
