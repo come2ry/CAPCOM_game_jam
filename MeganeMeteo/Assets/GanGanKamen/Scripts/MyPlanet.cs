@@ -111,6 +111,7 @@ public class MyPlanet : MonoBehaviour
             Vector3 force = (muzzle.transform.position - planet.transform.position).normalized;
             shooter.Shoot(new Vector2(force.x, force.y), shootPower);
             bulletNum -= 1;
+            SoundMng.Instance?.PlaySE(SoundMng.SETag.Shoot);
             canShoot = false;
         }
     }

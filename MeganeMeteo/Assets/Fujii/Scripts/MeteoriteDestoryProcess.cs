@@ -7,6 +7,7 @@ public class MeteoriteDestoryProcess : MonoBehaviour
     public void Dead()
     {
         Instantiate(EffectPrefab, transform.position, Quaternion.identity);
+        SoundMng.Instance?.PlaySE(SoundMng.SETag.Bomb);
         Destroy(gameObject.GetComponent<MeteoriteShooter>().RayInstance);
         Destroy(gameObject);
         // foreach ( Transform child in transform )
