@@ -14,11 +14,11 @@ public class MyPlanet : MonoBehaviour
     [SerializeField] private int maxNulletNum;
     [SerializeField] private Transform muzzle;
     [SerializeField] public float chargeTime;
-    [SerializeField] private float coolDownTime;
+    [SerializeField] public float coolDownTime;
     public bool canShoot = false;
     private bool isCharging = false;
     public float chargeCount = 0;
-    private float coolDownCount = 0;
+    public float coolDownCount = 0;
 
     public int hp;
     private int preHp;
@@ -42,13 +42,14 @@ public class MyPlanet : MonoBehaviour
     {
         preBulletNum = bulletNum;
         preHp = hp;
+        canShoot = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         ShootCoolDown();
-        ChargeBullet();
+        //ChargeBullet();
         HPChange();
         Debug.Log(planet.transform.rotation.eulerAngles);
     }
@@ -81,19 +82,36 @@ public class MyPlanet : MonoBehaviour
         
     }
 
-    public void Fire()
+    public void Fire(bool bulletNumLimit)
     {
-        if (canShoot == false || bulletNum <= 0)
+        if (bulletNumLimit)
         {
-            return;
+            if (canShoot == false || bulletNum <= 0)
+            {
+                return;
+            }
+            GameObject planetObj = Instantiate(meteoPrefab, muzzle.position, muzzle.rotation);
+
+            MeteoriteShooter shooter = planetObj.GetComponent<MeteoriteShooter>();
+            Vector3 force = (muzzle.transform.position - planet.transform.position).normalized;
+            shooter.Shoot(new Vector2(force.x, force.y), shootPower);
+            bulletNum -= 1;
+            canShoot = false;
         }
-        GameObject planetObj = Instantiate(meteoPrefab, muzzle.position, muzzle.rotation);
-        
-        MeteoriteShooter shooter = planetObj.GetComponent<MeteoriteShooter>();
-        Vector3 force = (muzzle.transform.position - planet.transform.position).normalized;
-        shooter.Shoot(new Vector2(force.x,force.y),shootPower);
-        bulletNum -= 1;
-        canShoot = false;
+        else
+        {
+            if (canShoot == false)
+            {
+                return;
+            }
+            GameObject planetObj = Instantiate(meteoPrefab, muzzle.position, muzzle.rotation);
+
+            MeteoriteShooter shooter = planetObj.GetComponent<MeteoriteShooter>();
+            Vector3 force = (muzzle.transform.position - planet.transform.position).normalized;
+            shooter.Shoot(new Vector2(force.x, force.y), shootPower);
+            bulletNum -= 1;
+            canShoot = false;
+        }
     }
 
     private void ShootCoolDown()
