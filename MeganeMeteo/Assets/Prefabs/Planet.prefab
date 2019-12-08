@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccbd04a84ae38949bb36ce8577f4872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 5
 --- !u!114 &2151785538461055279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 4227119721614371969}
   m_Layer: 0
   m_Name: BodyCollider
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -336,6 +336,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2247089258986207385}
     m_Modifications:
+    - target: {fileID: 9201880702972944277, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
+        type: 3}
+      propertyPath: m_Name
+      value: GravityEffect
+      objectReference: {fileID: 0}
     - target: {fileID: 9201880702973297589, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -390,11 +395,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9201880702972944277, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
-        type: 3}
-      propertyPath: m_Name
-      value: GravityEffect
       objectReference: {fileID: 0}
     - target: {fileID: 9201880702973297599, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
         type: 3}

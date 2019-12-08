@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 6706073397191757378}
   m_Layer: 0
   m_Name: BodyCollider
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5133,7 +5133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccbd04a84ae38949bb36ce8577f4872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 5
 --- !u!114 &8819685582714936300
 MonoBehaviour:
   m_ObjectHideFlags: 0
