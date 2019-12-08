@@ -25,7 +25,7 @@ public class PlanetPresenter : MonoBehaviour
         // 隕石と衝突したらダメージを与える
         if (collision.gameObject.CompareTag("Meteorite"))
         {
-            healthEvent.ReceiveDamage(20);
+            healthEvent.ReceiveDamage(1);
         }
     }
 

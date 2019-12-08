@@ -162,7 +162,7 @@ public class MyPlanet : MonoBehaviour
         if(preHp != hp)
         {
             invincible = true;
-            if(hp == 0 && MainGameSystem.gameOver == false && system != null)
+            if(hp == 0 && system.gameOver == false && system != null)
             {
                 system.GameOver(GetComponent<PlayerInput>().playerNum);
             }

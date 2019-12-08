@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class MainGameSystem : MonoBehaviour
 {
-    static public bool gameOver = false;
+    public bool gameOver = false;
     private MainGameScene gameScene;
     // Start is called before the first frame update
     private void Awake()
     {
-        gameScene = GetComponent<MainGameScene>();
+        
     }
 
     void Start()
     {
-        
+        gameScene = GetComponent<MainGameScene>();
     }
 
     // Update is called once per frame
