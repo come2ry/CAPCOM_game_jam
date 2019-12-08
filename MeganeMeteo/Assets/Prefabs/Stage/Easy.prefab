@@ -47,7 +47,7 @@ MonoBehaviour:
   difficulty: 0
   goalPos: 16
   startSpeed: 2
-  decelerationSpeed: 0.05
+  decelerationSpeed: 0.1
   decelerationRange: {x: -1, y: 1}
   startPos: {x: 0, y: -16, z: 0}
 --- !u!1001 &2553680952153828011
