@@ -47,4 +47,9 @@ public class MeteoriteShooter : MonoBehaviour
     {
         rb.AddForce(force * power);
     }
+
+    private void OnDestroy()
+    {
+        Destroy(RayInstance);
+    }
 }
