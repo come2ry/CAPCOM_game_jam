@@ -18,6 +18,9 @@ public class SoundMng : SingletonBase<SoundMng>
     {
         Cursor,
         Select,
+        Shoot,
+        Bomb,
+        MilkyRoad,
         SETagNum,
     }
     #endregion

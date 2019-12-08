@@ -13,6 +13,7 @@ public class MilkyWay : MonoBehaviour
         {
             var rigidbody = collision.gameObject.GetComponentInParent<Rigidbody2D>();
             rigidbody.AddForce(this.transform.up * power);
+            SoundMng.Instance?.PlaySE(SoundMng.SETag.MilkyRoad);
             Debug.Log("IsHit!!");
         }
     }
