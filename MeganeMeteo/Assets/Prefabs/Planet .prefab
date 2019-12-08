@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f47377ca6c9064c85fac26df1f40cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionMask: 6
   gravityPoint: {fileID: 1914713661}
   colliderEvent: {fileID: 2631168140795795951}
   healthEvent: {fileID: 6301006839342904131}
@@ -335,6 +336,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3205317620102280682}
     m_Modifications:
+    - target: {fileID: 9201880702972944277, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
+        type: 3}
+      propertyPath: m_Name
+      value: GravityEffect
+      objectReference: {fileID: 0}
     - target: {fileID: 9201880702973297589, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -389,11 +395,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9201880702972944277, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
-        type: 3}
-      propertyPath: m_Name
-      value: GravityEffect
       objectReference: {fileID: 0}
     - target: {fileID: 9201880702987454207, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
         type: 3}

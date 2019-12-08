@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class MeteoritePresenter : MonoBehaviour
 {
+    [SerializeField, Tooltip("衝突対象のマスク")]
+    private CollisionLayer collisionMask = (CollisionLayer)(-1);
+
     [SerializeField, Tooltip("コライダーイベント")]
     private Collision2DEvent colliderEvent = default;
 
@@ -16,8 +20,8 @@ public class MeteoritePresenter : MonoBehaviour
     /// <summary> 本体の衝突時時に通知が来る </summary>
     private void CollisionBody(Collision2D collision)
     {
-        // 惑星と衝突したら死亡処理を呼ぶ
-        if(collision.gameObject.CompareTag("Planet"))
+        // 衝突対象と衝突したら死亡処理を呼ぶ
+        if (((CollisionLayer)Enum.Parse(typeof(CollisionLayer), collision.gameObject.tag) & collisionMask) != 0)
         {
             destoryProcess.Dead();
         }

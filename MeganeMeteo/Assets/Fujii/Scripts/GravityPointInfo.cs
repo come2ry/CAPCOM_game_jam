@@ -3,10 +3,10 @@
 /// <summary> 重力ポイント情報クラス </summary>
 public class GravityPointInfo : MonoBehaviour
 {
-    [SerializeField, Range(0, 10), Tooltip("重力の範囲")]
+    [SerializeField, Range(0, 100), Tooltip("重力の範囲")]
     private float range = 5f;
 
-    [SerializeField, Range(-10, 10), Tooltip("重力の強さ")]
+    [SerializeField, Range(-100, 100), Tooltip("重力の強さ")]
     private float intencity = 5f;
 
     [SerializeField, Tooltip("重力の中心点")]
