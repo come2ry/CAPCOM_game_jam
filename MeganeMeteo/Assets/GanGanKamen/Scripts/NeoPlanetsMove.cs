@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class NeoPlanetsMove : MonoBehaviour
 {
-    public enum Size
+    public enum Difficulty
     {
-        Small,
-        Midium,
-        Big
+        Esay,
+        Medium,
+        Hard
     }
 
-    public Size size;
+    public Difficulty difficulty;
     public float goalPos;
     public float startSpeed;
+    public float decelerationSpeed;
+    private float realSpeed;
     private AllPlanetsMove allPlanetsMove;
     private bool isGoal = false;
-    [SerializeField]private float[] midPoin;
-    [SerializeField] private float[] speedChange; 
-    private int speedLevel;
+    [SerializeField]private Vector2 decelerationRange;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,36 +28,38 @@ public class NeoPlanetsMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeMoveSpeed();
+
+        ChangeSpeed();
         PlanetsMove();
+    }
+
+    private void ChangeSpeed()
+    {
+        if (transform.position.y >= decelerationRange.x && transform.position.y <= decelerationRange.y)
+        {
+            realSpeed = decelerationSpeed;
+        }
+        else
+        {
+            realSpeed = startSpeed;
+        }
+
     }
 
     private void PlanetsMove()
     {
         if(transform.position.y < goalPos)
         {
-            var speed = startSpeed * speedChange[speedLevel];
-            transform.Translate(0, speed * Time.deltaTime, 0);
+            transform.Translate(0, realSpeed * Time.deltaTime, 0);
         }
         else
         {
             transform.position = new Vector3(transform.position.x, goalPos, 0);
             if(isGoal == false)
             {
-                allPlanetsMove.level += 1;
                 isGoal = true;
+                allPlanetsMove.CreatPlanets();
                 Destroy(gameObject);
-            }
-        }
-    }
-
-    private void ChangeMoveSpeed()
-    {
-        for(int i = 0; i < midPoin.Length; i++)
-        {
-            if (transform.position.y >= midPoin[i] && speedLevel < i)
-            {
-                speedLevel += 1;
             }
         }
     }
