@@ -396,6 +396,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GravityEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 9201880702973297599, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201880702973297599, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201880702973297599, guid: 1e52b537d71f4f940aeac43ba6fa6f91,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e52b537d71f4f940aeac43ba6fa6f91, type: 3}
 --- !u!4 &4682756085955618879 stripped
