@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4cbe169eadb8e45bb90eb1bb759f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionMask: 6
   colliderEvent: {fileID: 5938388172862850298}
   destoryProcess: {fileID: 8784056501999180525}
 --- !u!114 &6801308946575960078
