@@ -40,7 +40,7 @@ public class PlayerInput : MonoBehaviour
                 }
                 if (Input.GetButtonDown("Fire1"))
                 {
-                    myPlanet.Fire();
+                    myPlanet.Fire(false);
                 }
                 break;
 
@@ -55,7 +55,7 @@ public class PlayerInput : MonoBehaviour
                 }
                 if (Input.GetButtonDown("Fire2"))
                 {
-                    myPlanet.Fire();
+                    myPlanet.Fire(false);
                 }
                 break;
         }

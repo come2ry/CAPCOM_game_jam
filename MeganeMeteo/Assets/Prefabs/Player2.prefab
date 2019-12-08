@@ -223,7 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planet: {fileID: 4230306675373042489}
   rotateSpeed: 50
-  meteoPrefab: {fileID: 2927809622979448261, guid: c5c68cbe995db024d82316b02d38c8ad,
+  meteoPrefab: {fileID: 4457380415164598187, guid: b85b5f9319ac34169a649c3f8b6a8638,
     type: 3}
   bulletNum: 99999
   shootPower: 100
@@ -238,6 +238,7 @@ MonoBehaviour:
   invincibleTime: 0.2
   invincibleCount: 0
   gameScene: {fileID: 0}
+  limit: 0
   limitRotate: {x: 10, y: 170}
 --- !u!58 &1604601351978699048
 CircleCollider2D:
