@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MyPlanet : MonoBehaviour
 {
+    [SerializeField] public bool hasBulletNum;
     [SerializeField] private GameObject planet;
     [SerializeField] private float rotateSpeed;
 
@@ -49,7 +50,7 @@ public class MyPlanet : MonoBehaviour
     void Update()
     {
         ShootCoolDown();
-        //ChargeBullet();
+        if(hasBulletNum)ChargeBullet();
         HPChange();
         Debug.Log(planet.transform.rotation.eulerAngles);
     }
