@@ -22,7 +22,7 @@ public class GravityPointInfo : MonoBehaviour
     private PointEffector2D effecter = default;
 
     [SerializeField, Tooltip("重力の衝突範囲")]
-    private CircleCollider2D collider = default;
+    private CircleCollider2D circleCollider = default;
 
     /// <summary> 重力の範囲 </summary>
     public float Range => range;
@@ -42,11 +42,11 @@ public class GravityPointInfo : MonoBehaviour
     /// <summary> 重力の表示に使うメッシュ </summary>
     public Mesh GravityRangeMesh { get; private set; }
 
-    // インスペクターから変更があったらメッシュを再構築する
     private void OnValidate()
     {
+        // インスペクターから変更があったら再設定する
         effecter.forceMagnitude = Intencity;
-        collider.radius = Range;
+        circleCollider.radius = Range;
         GravityRangeMesh = MeshCreater.CreateSectorMesh(360f * Mathf.Deg2Rad, quality);
     }
 }
