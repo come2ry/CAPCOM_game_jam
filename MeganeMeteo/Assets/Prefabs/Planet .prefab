@@ -154,7 +154,7 @@ MonoBehaviour:
   color: {r: 1, g: 0, b: 0.97422075, a: 0.2509804}
   quality: 32
   effecter: {fileID: 3205317621519394671}
-  circleCollider: {fileID: 0}
+  circleCollider: {fileID: 3205317621519394664}
 --- !u!114 &6301006839342904131
 MonoBehaviour:
   m_ObjectHideFlags: 0
