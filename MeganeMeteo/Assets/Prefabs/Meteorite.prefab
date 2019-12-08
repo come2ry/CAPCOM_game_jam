@@ -99,8 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb10c75e4ea748d44ae876f1126ca6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EffectPrefab: {fileID: 8366701848270037712, guid: f7072aa4558b44a48b1df7192f4f4b37,
-    type: 3}
+  EffectPrefab: {fileID: 100004, guid: 33384af7b24a0f14cb7bbf3b795f7a2b, type: 3}
 --- !u!114 &8349977305538766941
 MonoBehaviour:
   m_ObjectHideFlags: 0
