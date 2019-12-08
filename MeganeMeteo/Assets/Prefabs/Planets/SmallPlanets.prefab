@@ -741,6 +741,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3205317621519394664, guid: 0e948ec066428014faf3de30a037935a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3205317621519394671, guid: 0e948ec066428014faf3de30a037935a,
         type: 3}
       propertyPath: m_ForceMagnitude
@@ -753,11 +758,6 @@ PrefabInstance:
     - target: {fileID: 1914713661, guid: 0e948ec066428014faf3de30a037935a, type: 3}
       propertyPath: intencity
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3205317621519394664, guid: 0e948ec066428014faf3de30a037935a,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1530874365, guid: 0e948ec066428014faf3de30a037935a, type: 3}
       propertyPath: m_IsActive
@@ -847,13 +847,13 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.086240634
       objectReference: {fileID: 0}
-    - target: {fileID: 1914713661, guid: 0e948ec066428014faf3de30a037935a, type: 3}
-      propertyPath: range
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 3205317621519394664, guid: 0e948ec066428014faf3de30a037935a,
         type: 3}
       propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914713661, guid: 0e948ec066428014faf3de30a037935a, type: 3}
+      propertyPath: range
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1530874365, guid: 0e948ec066428014faf3de30a037935a, type: 3}
@@ -944,13 +944,13 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.086240634
       objectReference: {fileID: 0}
-    - target: {fileID: 1914713661, guid: 0e948ec066428014faf3de30a037935a, type: 3}
-      propertyPath: range
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 3205317621519394664, guid: 0e948ec066428014faf3de30a037935a,
         type: 3}
       propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914713661, guid: 0e948ec066428014faf3de30a037935a, type: 3}
+      propertyPath: range
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1530874365, guid: 0e948ec066428014faf3de30a037935a, type: 3}
@@ -1041,13 +1041,13 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.086240634
       objectReference: {fileID: 0}
-    - target: {fileID: 1914713661, guid: 0e948ec066428014faf3de30a037935a, type: 3}
-      propertyPath: range
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 3205317621519394664, guid: 0e948ec066428014faf3de30a037935a,
         type: 3}
       propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914713661, guid: 0e948ec066428014faf3de30a037935a, type: 3}
+      propertyPath: range
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1530874365, guid: 0e948ec066428014faf3de30a037935a, type: 3}
@@ -1123,6 +1123,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3205317621519394664, guid: 0e948ec066428014faf3de30a037935a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3205317621519394671, guid: 0e948ec066428014faf3de30a037935a,
         type: 3}
       propertyPath: m_ForceMagnitude
@@ -1135,11 +1140,6 @@ PrefabInstance:
     - target: {fileID: 1914713661, guid: 0e948ec066428014faf3de30a037935a, type: 3}
       propertyPath: intencity
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3205317621519394664, guid: 0e948ec066428014faf3de30a037935a,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1530874365, guid: 0e948ec066428014faf3de30a037935a, type: 3}
       propertyPath: m_IsActive
