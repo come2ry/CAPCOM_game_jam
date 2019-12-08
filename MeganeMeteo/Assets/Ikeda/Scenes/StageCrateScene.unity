@@ -1210,6 +1210,14 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.023529401
       objectReference: {fileID: 0}
+    - target: {fileID: 1147228009, guid: 8e1cf5abac3be2d488edd1d76f4b8f6e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147228009, guid: 8e1cf5abac3be2d488edd1d76f4b8f6e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e1cf5abac3be2d488edd1d76f4b8f6e, type: 3}
 --- !u!224 &1923524467 stripped
@@ -1300,6 +1308,11 @@ PrefabInstance:
       propertyPath: limit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5569057974218658908, guid: 9ffd9fcd5fa0ea443aa26abb1253472f,
+        type: 3}
+      propertyPath: shootPower
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ffd9fcd5fa0ea443aa26abb1253472f, type: 3}
 --- !u!4 &3330056086846793277 stripped
@@ -1374,6 +1387,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928382151899369529, guid: 2a8244a53d694034b8d90bfca404a621,
+        type: 3}
+      propertyPath: health
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017833138067915448, guid: 2a8244a53d694034b8d90bfca404a621,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017833138067915448, guid: 2a8244a53d694034b8d90bfca404a621,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017833138539207752, guid: 2a8244a53d694034b8d90bfca404a621,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017833138539207752, guid: 2a8244a53d694034b8d90bfca404a621,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017833138539207752, guid: 2a8244a53d694034b8d90bfca404a621,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a8244a53d694034b8d90bfca404a621, type: 3}
@@ -1458,6 +1501,11 @@ PrefabInstance:
         type: 3}
       propertyPath: limit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230306676527122574, guid: 4129fa94b3b51834c8e4bc1afe11fffa,
+        type: 3}
+      propertyPath: shootPower
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4129fa94b3b51834c8e4bc1afe11fffa, type: 3}
