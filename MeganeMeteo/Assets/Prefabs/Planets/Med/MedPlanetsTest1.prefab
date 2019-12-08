@@ -5040,6 +5040,7 @@ MonoBehaviour:
   startSpeed: 6
   decelerationSpeed: 3
   decelerationRange: {x: -3, y: 3}
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &6634546210802723220
 GameObject:
   m_ObjectHideFlags: 0

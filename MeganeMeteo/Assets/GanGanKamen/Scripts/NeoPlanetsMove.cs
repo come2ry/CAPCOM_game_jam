@@ -19,10 +19,12 @@ public class NeoPlanetsMove : MonoBehaviour
     private AllPlanetsMove allPlanetsMove;
     private bool isGoal = false;
     [SerializeField]private Vector2 decelerationRange;
+    [SerializeField] private Vector3 startPos;
     // Start is called before the first frame update
     void Start()
     {
         allPlanetsMove = GameObject.Find("AllPlanetsMove").GetComponent<AllPlanetsMove>();
+        transform.position = startPos;
     }
 
     // Update is called once per frame

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class AllPlanetsMove : MonoBehaviour
 {
-    public Vector3[] startPosition;
+    //public Vector3[] startPosition;
     //public float[] goalPosition;
     public List<GameObject> smallPlanets;
     public List<GameObject> midPlanets;
-    public List<GameObject> bigPlanets;
+    public List<GameObject> hardPlanets;
 
     public NeoPlanetsMove.Difficulty difficulty;
     private int planetsNum;
@@ -29,7 +29,7 @@ public class AllPlanetsMove : MonoBehaviour
         switch (difficulty)
         {
             case NeoPlanetsMove.Difficulty.Esay:
-                GameObject planetsObj = Instantiate(smallPlanets[planetsNum], startPosition[0], Quaternion.identity);
+                GameObject planetsObj = Instantiate(smallPlanets[planetsNum], Vector3.zero, Quaternion.identity);
                 NeoPlanetsMove planetsMove = planetsObj.GetComponent<NeoPlanetsMove>();
                 planetsNum++;
                 if(planetsNum >= smallPlanets.Count)
@@ -39,20 +39,20 @@ public class AllPlanetsMove : MonoBehaviour
                 }
                 break;
             case NeoPlanetsMove.Difficulty.Medium:
-                GameObject planetsObj1 = Instantiate(midPlanets[planetsNum], startPosition[1], Quaternion.identity);
+                GameObject planetsObj1 = Instantiate(midPlanets[planetsNum], Vector3.zero, Quaternion.identity);
                 //NeoPlanetsMove planetsMove1 = planetsObj1.GetComponent<NeoPlanetsMove>();
                 planetsNum++;
-                if (planetsNum >= smallPlanets.Count)
+                if (planetsNum >= midPlanets.Count)
                 {
                     planetsNum = 0;
                     difficulty = NeoPlanetsMove.Difficulty.Hard;
                 }
                 break;
             case NeoPlanetsMove.Difficulty.Hard:
-                GameObject planetsObj2 = Instantiate(midPlanets[planetsNum], startPosition[1], Quaternion.identity);
+                GameObject planetsObj2 = Instantiate(hardPlanets[planetsNum], Vector3.zero, Quaternion.identity);
                 //NeoPlanetsMove planetsMove2 = planetsObj1.GetComponent<NeoPlanetsMove>();
                 planetsNum++;
-                if (planetsNum >= smallPlanets.Count)
+                if (planetsNum >= hardPlanets.Count)
                 {
                     planetsNum = 0;
                 }
