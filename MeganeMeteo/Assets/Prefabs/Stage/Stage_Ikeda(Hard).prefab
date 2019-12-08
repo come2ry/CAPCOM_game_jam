@@ -211,6 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3761824580858160644}
+  - component: {fileID: 5661157528710429005}
   m_Layer: 0
   m_Name: Stage_Ikeda(Hard)
   m_TagString: Untagged
@@ -236,6 +237,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5661157528710429005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3761824580858160647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800fea1f8352cff4c92e9eae6fd205ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 2
+  goalPos: 16
+  startSpeed: 2
+  decelerationSpeed: 0.02
+  decelerationRange: {x: -1, y: 1}
+  startPos: {x: 0, y: -16, z: 0}
 --- !u!1001 &3761824579123922937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -243,11 +262,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3761824580002958801}
     m_Modifications:
-    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_Name
-      value: Obstacle_Planet_Break (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -303,15 +317,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
+    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 6
+      propertyPath: m_Name
+      value: Obstacle_Planet_Break (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 370bfc900ac91d44b8edd0b7f96ee208, type: 3}
@@ -513,11 +522,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3761824580002958801}
     m_Modifications:
-    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_Name
-      value: Obstacle_Planet_Break (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -573,15 +577,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
+    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 6
+      propertyPath: m_Name
+      value: Obstacle_Planet_Break (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 370bfc900ac91d44b8edd0b7f96ee208, type: 3}
@@ -1103,11 +1102,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3761824580002958801}
     m_Modifications:
-    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_Name
-      value: Obstacle_Planet_Break (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1163,15 +1157,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -52.168003
       objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
+    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 6
+      propertyPath: m_Name
+      value: Obstacle_Planet_Break (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 370bfc900ac91d44b8edd0b7f96ee208, type: 3}
@@ -1453,11 +1442,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3761824580002958801}
     m_Modifications:
-    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_Name
-      value: Obstacle_Planet_Break (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1513,15 +1497,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
+    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 6
+      propertyPath: m_Name
+      value: Obstacle_Planet_Break (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 370bfc900ac91d44b8edd0b7f96ee208, type: 3}
@@ -1628,11 +1607,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3761824580002958801}
     m_Modifications:
-    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_Name
-      value: Obstacle_Planet_Break (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1688,15 +1662,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
+    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 6
+      propertyPath: m_Name
+      value: Obstacle_Planet_Break (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 370bfc900ac91d44b8edd0b7f96ee208, type: 3}
@@ -1808,11 +1777,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3761824580002958801}
     m_Modifications:
-    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_Name
-      value: Obstacle_Planet_Break
-      objectReference: {fileID: 0}
     - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1868,20 +1832,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
+    - target: {fileID: 2788461162685379855, guid: 370bfc900ac91d44b8edd0b7f96ee208,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379850, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2788461162685379849, guid: 370bfc900ac91d44b8edd0b7f96ee208,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
+      propertyPath: m_Name
+      value: Obstacle_Planet_Break
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 370bfc900ac91d44b8edd0b7f96ee208, type: 3}

@@ -994,6 +994,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565093118531170333, guid: 340464a198c40f640b26ce529cf0c4d7,
         type: 3}
+      propertyPath: midPlanets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565093118531170333, guid: 340464a198c40f640b26ce529cf0c4d7,
+        type: 3}
+      propertyPath: smallPlanets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565093118531170333, guid: 340464a198c40f640b26ce529cf0c4d7,
+        type: 3}
       propertyPath: bigPlanets.Array.data[0]
       value: 
       objectReference: {fileID: 3761824580858160647, guid: 2a8244a53d694034b8d90bfca404a621,
@@ -1003,6 +1013,18 @@ PrefabInstance:
       propertyPath: hardPlanets.Array.data[0]
       value: 
       objectReference: {fileID: 3761824580858160647, guid: 2a8244a53d694034b8d90bfca404a621,
+        type: 3}
+    - target: {fileID: 7565093118531170333, guid: 340464a198c40f640b26ce529cf0c4d7,
+        type: 3}
+      propertyPath: midPlanets.Array.data[0]
+      value: 
+      objectReference: {fileID: 640368885695578020, guid: d04be553e0a985d4f89fce89640ac370,
+        type: 3}
+    - target: {fileID: 7565093118531170333, guid: 340464a198c40f640b26ce529cf0c4d7,
+        type: 3}
+      propertyPath: smallPlanets.Array.data[0]
+      value: 
+      objectReference: {fileID: 6432348996516582007, guid: f929cc75d93565b41a6dd0b7f4bf7157,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 340464a198c40f640b26ce529cf0c4d7, type: 3}
