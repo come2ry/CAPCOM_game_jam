@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthEvent : MonoBehaviour
 {
     [SerializeField, Tooltip("現在の体力")]
-    private int health = 100;
+    private int health = 10;
 
     /// <summary> 現在の体力 </summary>
     public int Health => health;
@@ -27,7 +27,7 @@ public class HealthEvent : MonoBehaviour
         SetHealth(Health - damage);
 
         // ダメージを受けた時のイベントを通知する
-        DeadEvent.Invoke();
+        DamageEvent.Invoke(damage);
     }
 
     /// <summary> 体力を回復します。 </summary>
