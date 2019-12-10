@@ -682,15 +682,15 @@ PrefabInstance:
       propertyPath: intencity
       value: 33
       objectReference: {fileID: 0}
-    - target: {fileID: 4303283450403790701, guid: a6fc26a971b564808adfe199b1fb1005,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 33
-      objectReference: {fileID: 0}
     - target: {fileID: 7407726759902213783, guid: a6fc26a971b564808adfe199b1fb1005,
         type: 3}
       propertyPath: m_Radius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4303283450403790701, guid: a6fc26a971b564808adfe199b1fb1005,
+        type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 6589258028785457981, guid: a6fc26a971b564808adfe199b1fb1005,
         type: 3}
@@ -1057,15 +1057,15 @@ PrefabInstance:
       propertyPath: intencity
       value: 33
       objectReference: {fileID: 0}
-    - target: {fileID: 4303283450403790701, guid: a6fc26a971b564808adfe199b1fb1005,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 33
-      objectReference: {fileID: 0}
     - target: {fileID: 7407726759902213783, guid: a6fc26a971b564808adfe199b1fb1005,
         type: 3}
       propertyPath: m_Radius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4303283450403790701, guid: a6fc26a971b564808adfe199b1fb1005,
+        type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 6589258028785457981, guid: a6fc26a971b564808adfe199b1fb1005,
         type: 3}
@@ -1742,6 +1742,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6499796015647805695, guid: 120c999899c924732ad38c750865126e,
+        type: 3}
+      propertyPath: health
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4379965596095576574, guid: 120c999899c924732ad38c750865126e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1751,11 +1756,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6499796015647805695, guid: 120c999899c924732ad38c750865126e,
-        type: 3}
-      propertyPath: health
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4227119721614371969, guid: 120c999899c924732ad38c750865126e,
         type: 3}
